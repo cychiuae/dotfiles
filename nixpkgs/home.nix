@@ -8,6 +8,7 @@
 
   home.packages = [
     pkgs.kubectl
+    pkgs.tmux
   ];
 
   # This value determines the Home Manager release that your
