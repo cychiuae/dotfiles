@@ -8,6 +8,7 @@
 
   home.packages = [
     pkgs.fzf
+    pkgs.jq
     pkgs.kubectl
     pkgs.tmux
   ];
