@@ -11,6 +11,7 @@
     pkgs.fzf
     pkgs.jq
     pkgs.kubectl
+    pkgs.neovim
     pkgs.ripgrep
     pkgs.tmux
   ];
