@@ -7,6 +7,7 @@
   home.homeDirectory = "/Users/yinyinchiu";
 
   home.packages = [
+    pkgs.fzf
     pkgs.kubectl
     pkgs.tmux
   ];
