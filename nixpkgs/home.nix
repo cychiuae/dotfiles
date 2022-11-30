@@ -10,6 +10,7 @@
     pkgs.fzf
     pkgs.jq
     pkgs.kubectl
+    pkgs.ripgrep
     pkgs.tmux
   ];
 
