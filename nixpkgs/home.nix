@@ -14,6 +14,7 @@
     pkgs.neovim
     pkgs.ripgrep
     pkgs.tmux
+    pkgs.yarn
   ];
 
   # This value determines the Home Manager release that your
