@@ -1,6 +1,13 @@
 { config, pkgs, ... }:
 
+let
+  imports = [
+    ./tmux.nix
+  ];
+in
 {
+  inherit imports;
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "yinyinchiu";
