@@ -7,6 +7,7 @@
   home.homeDirectory = "/Users/yinyinchiu";
 
   home.packages = [
+    pkgs.fd
     pkgs.fzf
     pkgs.jq
     pkgs.kubectl
