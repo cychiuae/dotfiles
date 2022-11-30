@@ -8,31 +8,33 @@ in
 {
   inherit imports;
 
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
-  home.username = "yinyinchiu";
-  home.homeDirectory = "/Users/yinyinchiu";
+  home = {
+    # Home Manager needs a bit of information about you and the
+    # paths it should manage.
+    username = "yinyinchiu";
+    homeDirectory = "/Users/yinyinchiu";
 
-  home.packages = [
-    pkgs.fd
-    pkgs.fzf
-    pkgs.jq
-    pkgs.kubectl
-    pkgs.neovim
-    pkgs.ripgrep
-    pkgs.tmux
-    pkgs.yarn
+    # This value determines the Home Manager release that your
+    # configuration is compatible with. This helps avoid breakage
+    # when a new Home Manager release introduces backwards
+    # incompatible changes.
+    #
+    # You can update Home Manager without changing this value. See
+    # the Home Manager release notes for a list of state version
+    # changes in each release.
+    stateVersion = "22.05";
+  };
+
+  home.packages = with pkgs; [
+    fd
+    fzf
+    jq
+    kubectl
+    neovim
+    ripgrep
+    tmux
+    yarn
   ];
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
-  home.stateVersion = "22.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
