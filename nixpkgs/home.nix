@@ -28,6 +28,7 @@ in
   home.packages = with pkgs; [
     fd
     fzf
+    gnupg
     jq
     kubectl
     neovim
