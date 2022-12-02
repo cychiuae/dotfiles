@@ -2,6 +2,7 @@
 
 let
   imports = [
+    ./git.nix
     ./tmux.nix
   ];
 in
