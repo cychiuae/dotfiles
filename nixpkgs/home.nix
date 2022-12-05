@@ -34,6 +34,7 @@ in
     jq
     kubectl
     neovim
+    reattach-to-user-namespace # cp & paste in tmux to clipboard
     ripgrep
     tmux
     yarn
