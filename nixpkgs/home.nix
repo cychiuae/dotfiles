@@ -29,13 +29,13 @@ in
 
   home.packages = with pkgs; [
     fd
-    fzf
     gnupg
     jq
     kubectl
     neovim
     reattach-to-user-namespace # cp & paste in tmux to clipboard
     ripgrep
+    skim
     tmux
     yarn
   ];
