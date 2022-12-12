@@ -3,6 +3,7 @@
 let
   imports = [
     ./git.nix
+    ./neovim.nix
     ./tmux.nix
     ./zsh.nix
   ];
@@ -34,7 +35,6 @@ in
     jq
     kubectl
     kubectx
-    neovim
     reattach-to-user-namespace # cp & paste in tmux to clipboard
     ripgrep
     skim
