@@ -14,7 +14,7 @@
       }
       {
         name = "powerlevel10k-config";
-        src = lib.cleanSource ./p10k-config;
+        src = lib.cleanSource ../p10k-config;
         file = "p10k.zsh";
       }
     ];
@@ -34,7 +34,6 @@
       export PATH=~/Library/Android/sdk/tools:$PATH
       export PATH=~/Library/Android/sdk/platform-tools:$PATH
       export PATH="/usr/local/sbin:$PATH"
-      export CLOUDSDK_PYTHON=python2
 
       DISABLE_AUTO_TITLE="true"
 
