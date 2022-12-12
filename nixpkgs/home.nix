@@ -29,6 +29,7 @@ in
 
   home.packages = with pkgs; [
     fd
+    google-cloud-sdk
     gnupg
     jq
     kubectl
@@ -38,6 +39,7 @@ in
     ripgrep
     skim
     tmux
+    xh
     yarn
   ];
 
