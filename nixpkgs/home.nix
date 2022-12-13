@@ -41,6 +41,9 @@ in
     tmux
     xh
     yarn
+
+    # lsp
+    rnix-lsp
   ];
 
   # Let Home Manager install and manage itself.

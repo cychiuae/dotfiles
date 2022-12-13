@@ -13,5 +13,10 @@
     extraConfig = ''
       luafile ~/.config/nvim/settings.lua
     '';
+
+    plugins = with pkgs.vimPlugins; [
+      # lsp
+      nvim-lspconfig
+    ];
   };
 }

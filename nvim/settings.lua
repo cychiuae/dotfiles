@@ -4,4 +4,4 @@ vim.opt.number = true
 -- leader key
 vim.g.mapleader = ","
 
-require('plugins')
+require('plugins.lsp')
