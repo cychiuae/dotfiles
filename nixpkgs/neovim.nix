@@ -34,7 +34,7 @@ in
       rnix-lsp
       # ts
       nodePackages.eslint_d
-      nodePackages.prettier_d_slim
+      nodePackages.prettier
       nodePackages.typescript
       nodePackages.typescript-language-server
     ];

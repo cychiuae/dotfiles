@@ -26,12 +26,12 @@ vim.opt.clipboard = "unnamedplus"
 vim.o.completeopt = "menu,menuone,noselect"
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format{}]]
 
 -- Tabs
-vim.api.nvim_set_keymap('n', '<Leader>t', ':tabnew<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-h>', ':tabprevious<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-l>', ':tabnext<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>t', ':tabnew<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-h>', ':tabprevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-l>', ':tabnext<CR>', { noremap = true, silent = true })
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
