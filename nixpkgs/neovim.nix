@@ -37,6 +37,10 @@ in
       # lsp
       nvim-lspconfig
 
+      # telescope
+      plenary-nvim
+      telescope-nvim
+
       # tree
       nvim-tree-lua
       nvim-web-devicons

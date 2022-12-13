@@ -27,6 +27,7 @@ vim.g.loaded_netrwPlugin = 1
 
 require('plugins.indentblankline')
 require('plugins.lsp')
+require('plugins.telescope')
 require('plugins.tree')
 require('plugins.treesitter')
 require('theme')
