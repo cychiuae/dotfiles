@@ -22,8 +22,14 @@ require('telescope').setup {
         ["<C-k>"] = actions.move_selection_previous,
       },
     },
+    file_ignore_patterns = { ".git/*" },
   }
 }
 
-vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>',  {noremap = true, silent = true})
+vim.api.nvim_set_keymap(
+  'n',
+  '<C-p>',
+  '<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files <cr>',
+  {noremap = true, silent = true}
+)
 
