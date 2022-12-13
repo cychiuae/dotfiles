@@ -32,8 +32,9 @@ in
       sumneko-lua-language-server
       # nix
       rnix-lsp
-
       # ts
+      nodePackages.eslint_d
+      nodePackages.prettier_d_slim
       nodePackages.typescript
       nodePackages.typescript-language-server
     ];
@@ -56,6 +57,7 @@ in
 
       # lsp
       nvim-lspconfig
+      null-ls-nvim
 
       # telescope
       plenary-nvim
@@ -69,6 +71,8 @@ in
       nvim-treesitter
 
       # theme
+      lualine-nvim
+      tokyonight-nvim
       {
         plugin = vscode-nvim;
       }
