@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local on_attach = function(client, bufnr)
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -11,10 +12,12 @@ end
 -- lua
 lspconfig["sumneko_lua"].setup {
   on_attach = on_attach,
+  capabilities = capabilities,
 }
 
 -- nix
 lspconfig["rnix"].setup {
   on_attach = on_attach,
+  capabilities = capabilities,
 }
 

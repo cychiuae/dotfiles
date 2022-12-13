@@ -22,9 +22,13 @@ vim.opt.listchars = {
 -- clibboard
 vim.opt.clipboard = "unnamedplus"
 
+-- autocomplete
+vim.o.completeopt = "menu,menuone,noselect"
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+require('plugins.cmp')
 require('plugins.indentblankline')
 require('plugins.lsp')
 require('plugins.telescope')

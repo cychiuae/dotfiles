@@ -32,8 +32,17 @@ in
     ];
 
     plugins = with pkgs.vimPlugins; [
+      # cmp
+      cmp-nvim-lsp
+      cmp-buffer
+      cmp-path
+      cmp-cmdline
+      nvim-cmp
+      cmp-vsnip
+      vim-vsnip
+
       # indentation
-    indent-blankline-nvim
+      indent-blankline-nvim
 
       # lsp
       nvim-lspconfig
