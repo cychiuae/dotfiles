@@ -4,9 +4,17 @@ local parser_install_dir = '~/.config/nvim-plugins/treesitter/parsers'
 vim.opt.runtimepath:append(parser_install_dir)
 
 require('nvim-treesitter.configs').setup {
+  autotag = {
+    enable = true,
+  },
   ensure_installed = {
+    "javascript",
     "lua",
+    "markdown",
     "nix",
+    "scss",
+    "tsx",
+    "typescript",
   },
   highlight = {
     enable = true,
@@ -14,3 +22,4 @@ require('nvim-treesitter.configs').setup {
   },
   parser_install_dir = parser_install_dir,
 }
+

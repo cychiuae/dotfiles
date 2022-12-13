@@ -4,10 +4,10 @@ let
   vscode-nvim = pkgs.vimUtils.buildVimPlugin {
     name = "vscode.nvim";
     src = pkgs.fetchFromGitHub {
-        owner = "Mofiqul";
-        repo = "vscode.nvim";
-        rev = "dabd5454e88d9ac9f91a5c2f9f6b347410e31162";
-        sha256 = "sha256-08+N892xOvbFEk/yAZLZHcR+ixdVTOeY83xO3wf/Oqc=";
+      owner = "Mofiqul";
+      repo = "vscode.nvim";
+      rev = "dabd5454e88d9ac9f91a5c2f9f6b347410e31162";
+      sha256 = "sha256-08+N892xOvbFEk/yAZLZHcR+ixdVTOeY83xO3wf/Oqc=";
     };
   };
 in
@@ -27,11 +27,21 @@ in
 
     extraPackages = with pkgs; [
       # lsp
-      rnix-lsp
+
+      # lua
       sumneko-lua-language-server
+      # nix
+      rnix-lsp
+
+      # ts
+      nodePackages.typescript
+      nodePackages.typescript-language-server
     ];
 
     plugins = with pkgs.vimPlugins; [
+      # Match bracket
+      nvim-ts-autotag
+
       # cmp
       cmp-nvim-lsp
       cmp-buffer
