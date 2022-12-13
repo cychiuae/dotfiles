@@ -5,3 +5,5 @@ vim.opt.number = true
 vim.g.mapleader = ","
 
 require('plugins.lsp')
+require('plugins.treesitter')
+require('theme')
