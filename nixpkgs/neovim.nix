@@ -28,6 +28,7 @@ in
     extraPackages = with pkgs; [
       # lsp
       rnix-lsp
+      sumneko-lua-language-server
     ];
 
     plugins = with pkgs.vimPlugins; [
