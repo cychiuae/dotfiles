@@ -33,6 +33,10 @@ in
       # lsp
       nvim-lspconfig
 
+      # tree
+      nvim-tree-lua
+      nvim-web-devicons
+
       # treesitter
       nvim-treesitter
 
