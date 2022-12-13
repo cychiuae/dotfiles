@@ -36,6 +36,7 @@ vim.api.nvim_set_keymap('n', '<C-l>', ':tabnext<CR>', {noremap = true, silent = 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+require('plugins.bufferline')
 require('plugins.cmp')
 require('plugins.indentblankline')
 require('plugins.lsp')

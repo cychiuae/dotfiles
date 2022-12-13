@@ -71,6 +71,7 @@ in
       nvim-treesitter
 
       # theme
+      bufferline-nvim
       lualine-nvim
       tokyonight-nvim
       {
