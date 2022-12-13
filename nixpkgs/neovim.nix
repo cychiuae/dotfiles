@@ -1,4 +1,5 @@
 { config, pkgs, lib, ... }:
+
 let
   vscode-nvim = pkgs.vimUtils.buildVimPlugin {
     name = "vscode.nvim";
@@ -30,6 +31,9 @@ in
     ];
 
     plugins = with pkgs.vimPlugins; [
+      # indentation
+    indent-blankline-nvim
+
       # lsp
       nvim-lspconfig
 
