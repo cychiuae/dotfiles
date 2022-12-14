@@ -16,14 +16,16 @@ require('nvim-tree').setup({
       },
     },
   },
-	view = {
-		mappings = {
-			list = {
-				{ key = "<C-n>", action = "create"}
-			},
-		},
-	},
+  view = {
+    adaptive_size = true,
+    width = 40,
+    mappings = {
+      list = {
+        { key = "<C-n>", action = "create" }
+      },
+    },
+  },
 })
 
 vim.opt.termguicolors = true
-vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeFindFileToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
