@@ -19,6 +19,10 @@ vim.opt.listchars = {
 	tab = ">-",
 }
 
+-- Faster esc
+vim.opt.timeoutlen = 500
+vim.opt.ttimeoutlen = 5
+
 -- clibboard
 vim.opt.clipboard = "unnamedplus"
 
