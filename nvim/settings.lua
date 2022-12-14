@@ -56,6 +56,8 @@ vim.g.loaded_netrwPlugin = 1
 require('plugins.bufferline')
 require('plugins.cmp')
 require('plugins.indentblankline')
+-- need to load mason before lsp
+require('plugins.mason')
 require('plugins.lsp')
 require('plugins.lualine')
 require('plugins.nullls')

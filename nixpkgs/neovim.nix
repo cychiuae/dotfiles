@@ -10,8 +10,30 @@ let
       sha256 = "sha256-08+N892xOvbFEk/yAZLZHcR+ixdVTOeY83xO3wf/Oqc=";
     };
   };
-  customNodePackages = pkgs.callPackage ./nodePackages { };
-
+  mason-nvim = pkgs.vimUtils.buildVimPlugin {
+    name = "mason.nvim";
+    src = pkgs.fetchFromGitHub {
+      owner = "williamboman";
+      repo = "mason.nvim";
+      rev = "b3c82a23b26818e18e20036452bdcf7821ddc37d";
+      sha256 = "sha256-+3ppOoOVpguK6ghE3KByGnY2j5GpaxGmOGwmTBT3bfE=";
+    };
+    buildPhase = ''
+      echo "Skip build phase"
+    '';
+  };
+  mason-lspconfig-nvim = pkgs.vimUtils.buildVimPlugin {
+    name = "mason-lspconfig.nvim";
+    src = pkgs.fetchFromGitHub {
+      owner = "williamboman";
+      repo = "mason-lspconfig.nvim";
+      rev = "e8bd50153b94cc5bbfe3f59fc10ec7c4902dd526";
+      sha256 = "sha256-BHUw/LUVxfw5XWjW5EYMAyTmnRpuvt+duoOkHjJO878=";
+    };
+    buildPhase = ''
+      echo "Skip build phase"
+    '';
+  };
 in
 {
   xdg.configFile."nvim/settings.lua".source = lib.cleanSource ../nvim/settings.lua;
@@ -28,21 +50,9 @@ in
     '';
 
     extraPackages = with pkgs; [
-      # lsp
-
-      # lua
-      sumneko-lua-language-server
-      # nix
-      rnix-lsp
-      # ts
-      nodePackages.typescript
-      nodePackages.typescript-language-server
-
       # tools
       nodePackages.eslint_d
       nodePackages.prettier
-    ] ++ [
-      customNodePackages."@angular/language-server"
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -80,9 +90,13 @@ in
       bufferline-nvim
       lualine-nvim
       tokyonight-nvim
-      {
-        plugin = vscode-nvim;
-      }
+    ] ++ [
+      # manage lsp
+      mason-nvim
+      mason-lspconfig-nvim
+
+      # theme
+      vscode-nvim
     ];
   };
 }
