@@ -70,6 +70,9 @@ in
       # Match bracket
       nvim-ts-autotag
 
+      # Quick comment out code
+      vim-commentary
+
       # cmp
       cmp-nvim-lsp
       cmp-buffer
