@@ -10,6 +10,8 @@ let
       sha256 = "sha256-08+N892xOvbFEk/yAZLZHcR+ixdVTOeY83xO3wf/Oqc=";
     };
   };
+  customNodePackages = pkgs.callPackage ./nodePackages { };
+
 in
 {
   xdg.configFile."nvim/settings.lua".source = lib.cleanSource ../nvim/settings.lua;
@@ -33,10 +35,14 @@ in
       # nix
       rnix-lsp
       # ts
-      nodePackages.eslint_d
-      nodePackages.prettier
       nodePackages.typescript
       nodePackages.typescript-language-server
+
+      # tools
+      nodePackages.eslint_d
+      nodePackages.prettier
+    ] ++ [
+      customNodePackages."@angular/language-server"
     ];
 
     plugins = with pkgs.vimPlugins; [

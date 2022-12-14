@@ -17,6 +17,12 @@ local make_on_attach = function(options)
   return on_attach
 end
 
+-- angular
+lspconfig["angularls"].setup {
+  on_attach = make_on_attach {},
+  capabilities = capabilities,
+}
+
 -- lua
 lspconfig["sumneko_lua"].setup {
   on_attach = make_on_attach {},
