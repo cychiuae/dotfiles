@@ -58,6 +58,14 @@ in
       luafile ~/.config/nvim/settings.lua
     '';
 
+    extraPackages = with pkgs; [
+      # lsp
+
+      # js/ts
+      nodePackages.typescript
+      nodePackages.typescript-language-server
+    ];
+
     plugins = with pkgs.vimPlugins; [
       # Match bracket
       nvim-ts-autotag

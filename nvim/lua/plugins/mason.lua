@@ -5,7 +5,6 @@ require("mason-lspconfig").setup({
 		"angularls", -- angularls
 		"sumneko_lua", --lua
 		"rnix", -- nix
-		"tsserver", -- js/ts
 	},
 })
 
