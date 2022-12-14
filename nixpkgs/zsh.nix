@@ -28,6 +28,8 @@
     };
 
     initExtra = ''
+      export LANG=en_US.UTF-8
+
       export ANDROID_HOME=~/Library/Android/sdk
       export GOPATH=$HOME/golang
       export PATH=$PATH:$GOPATH/bin
