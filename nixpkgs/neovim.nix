@@ -34,6 +34,15 @@ let
       echo "Skip build phase"
     '';
   };
+  mason-null-ls-nvim = pkgs.vimUtils.buildVimPlugin {
+    name = "mason-null-ls.nvim";
+    src = pkgs.fetchFromGitHub {
+      owner = "jay-babu";
+      repo = "mason-null-ls.nvim";
+      rev = "0fcc40394b8d0f525a8be587268cbfac3e70a5bc";
+      sha256 = "sha256-gUnG3kCNHc7aTOR5844zQwdNsDhi0uuVHT/n36NGXJg=";
+    };
+  };
 in
 {
   xdg.configFile."nvim/settings.lua".source = lib.cleanSource ../nvim/settings.lua;
@@ -48,12 +57,6 @@ in
     extraConfig = ''
       luafile ~/.config/nvim/settings.lua
     '';
-
-    extraPackages = with pkgs; [
-      # tools
-      nodePackages.eslint_d
-      nodePackages.prettier
-    ];
 
     plugins = with pkgs.vimPlugins; [
       # Match bracket
@@ -94,6 +97,7 @@ in
       # manage lsp
       mason-nvim
       mason-lspconfig-nvim
+      mason-null-ls-nvim
 
       # theme
       vscode-nvim

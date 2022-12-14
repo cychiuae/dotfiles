@@ -9,3 +9,11 @@ require('mason-lspconfig').setup {
     "tsserver", -- js/ts
   },
 }
+
+require('mason-null-ls').setup {
+  ensure_installed = {
+    "eslint_d",
+    "prettier",
+    "stylua",
+  },
+}

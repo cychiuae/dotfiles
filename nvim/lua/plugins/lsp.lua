@@ -25,7 +25,9 @@ lspconfig["angularls"].setup {
 
 -- lua
 lspconfig["sumneko_lua"].setup {
-  on_attach = make_on_attach {},
+  on_attach = make_on_attach {
+    disable_formatting = true,
+  },
   capabilities = capabilities,
 }
 
