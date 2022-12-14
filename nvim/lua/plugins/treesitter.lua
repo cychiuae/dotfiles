@@ -8,13 +8,18 @@ require("nvim-treesitter.configs").setup({
 		enable = true,
 	},
 	ensure_installed = {
+		"graphql",
+		"html",
 		"javascript",
+		"json",
 		"lua",
+		"make",
 		"markdown",
 		"nix",
 		"scss",
 		"tsx",
 		"typescript",
+		"yaml",
 	},
 	highlight = {
 		enable = true,

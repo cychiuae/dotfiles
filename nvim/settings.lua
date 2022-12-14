@@ -31,6 +31,7 @@ vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format{}]])
 -- Tabs / Buffers
 vim.api.nvim_set_keymap("n", "<C-h>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-l>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>q", ":bdelete<CR>", { noremap = true, silent = true })
 
 -- Lazy redraw
 -- People say this will make nvim faster
