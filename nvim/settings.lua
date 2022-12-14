@@ -28,10 +28,27 @@ vim.o.completeopt = "menu,menuone,noselect"
 -- Format on save
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format{}]]
 
--- Tabs
-vim.api.nvim_set_keymap('n', '<Leader>t', ':tabnew<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-h>', ':tabprevious<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-l>', ':tabnext<CR>', { noremap = true, silent = true })
+-- Tabs / Buffers
+vim.api.nvim_set_keymap('n', '<C-h>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-l>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
+
+-- Lazy redraw
+-- People say this will make nvim faster
+vim.opt.lazyredraw = true
+
+-- bracket
+vim.opt.showmatch = true
+
+-- Direct write to files
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
+vim.opt.hidden = true
+
+vim.opt.mouse = 'a'
+
+-- Helpful column line
+vim.wo.colorcolumn = '80,120'
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
