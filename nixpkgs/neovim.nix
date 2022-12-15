@@ -82,6 +82,9 @@ in
       cmp-vsnip
       vim-vsnip
 
+      # git
+      gitsigns-nvim
+
       # indentation
       indent-blankline-nvim
 
