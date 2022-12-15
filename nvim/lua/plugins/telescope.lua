@@ -22,7 +22,6 @@ require("telescope").setup({
 				["<C-k>"] = actions.move_selection_previous,
 			},
 		},
-		file_ignore_patterns = { ".git/*" },
 	},
 })
 
