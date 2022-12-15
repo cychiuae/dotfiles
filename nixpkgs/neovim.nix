@@ -68,13 +68,14 @@ in
 
     plugins = with pkgs.vimPlugins; [
       # Match bracket
-      nvim-ts-autotag
+      nvim-autopairs
 
       # Quick comment out code
       vim-commentary
 
       # cmp
       cmp-nvim-lsp
+      cmp-nvim-lsp-signature-help
       cmp-buffer
       cmp-path
       cmp-cmdline

@@ -1,5 +1,8 @@
 local lspconfig = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+local lsp_defaults = lspconfig.util.default_config
+lsp_defaults.capabilities =
+	vim.tbl_deep_extend("force", lsp_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 local make_on_attach = function(options)
 	local on_attach = function(client, bufnr)
@@ -28,13 +31,18 @@ lspconfig["sumneko_lua"].setup({
 	on_attach = make_on_attach({
 		disable_formatting = true,
 	}),
-	capabilities = capabilities,
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
 })
 
 -- nix
 lspconfig["rnix"].setup({
 	on_attach = make_on_attach({}),
-	capabilities = capabilities,
 })
 
 -- typescript
@@ -42,5 +50,4 @@ lspconfig["tsserver"].setup({
 	on_attach = make_on_attach({
 		disable_formatting = true,
 	}),
-	capabilities = capabilities,
 })

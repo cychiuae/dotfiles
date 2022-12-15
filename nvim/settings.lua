@@ -27,7 +27,7 @@ vim.opt.ttimeoutlen = 5
 vim.opt.clipboard = "unnamedplus"
 
 -- autocomplete
-vim.o.completeopt = "menu,menuone,noselect"
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 -- Format on save
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format{}]])
@@ -58,6 +58,7 @@ vim.wo.colorcolumn = "80,120"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+require("plugins.autopairs")
 require("plugins.bufferline")
 require("plugins.cmp")
 require("plugins.gitsign")
