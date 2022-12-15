@@ -59,6 +59,9 @@ in
     '';
 
     extraPackages = with pkgs; [
+      # formatter
+      nixpkgs-fmt
+
       # lsp
 
       # js/ts
