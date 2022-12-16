@@ -43,6 +43,8 @@ let
       sha256 = "sha256-gUnG3kCNHc7aTOR5844zQwdNsDhi0uuVHT/n36NGXJg=";
     };
   };
+
+  customNodePackages = pkgs.callPackage ./nodePackages { };
 in
 {
   xdg.configFile."nvim/settings.lua".source = lib.cleanSource ../nvim/settings.lua;
@@ -64,9 +66,14 @@ in
 
       # lsp
 
+      #nix
+      rnix-lsp
       # js/ts
       nodePackages.typescript
       nodePackages.typescript-language-server
+    ] ++ [
+      # tailwindcss
+      customNodePackages."@tailwindcss/language-server"
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -76,6 +83,9 @@ in
 
       # Quick comment out code
       vim-commentary
+
+      # some colors
+      nvim-colorizer-lua
 
       # cmp
       cmp-nvim-lsp

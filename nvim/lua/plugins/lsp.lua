@@ -1,7 +1,7 @@
 local lspconfig = require("lspconfig")
 
 local lsp_defaults = lspconfig.util.default_config
-lsp_defaults.capabilities =
+local capabilities =
 	vim.tbl_deep_extend("force", lsp_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 local make_on_attach = function(options)
@@ -29,6 +29,7 @@ end
 
 -- lua
 lspconfig["sumneko_lua"].setup({
+	capabilities,
 	on_attach = make_on_attach({
 		disable_formatting = true,
 	}),
@@ -43,11 +44,18 @@ lspconfig["sumneko_lua"].setup({
 
 -- nix
 lspconfig["rnix"].setup({
+	capabilities,
+	on_attach = make_on_attach({}),
+})
+
+-- tailwind
+lspconfig["tailwindcss"].setup({
 	on_attach = make_on_attach({}),
 })
 
 -- typescript
 lspconfig["tsserver"].setup({
+	capabilities,
 	on_attach = make_on_attach({
 		disable_formatting = true,
 	}),
