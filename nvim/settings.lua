@@ -19,6 +19,10 @@ vim.opt.listchars = {
 	tab = ">-",
 }
 
+-- search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- Faster esc
 vim.opt.timeoutlen = 500
 vim.opt.ttimeoutlen = 5
