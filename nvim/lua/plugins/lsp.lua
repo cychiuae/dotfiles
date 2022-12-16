@@ -7,6 +7,7 @@ lsp_defaults.capabilities =
 local make_on_attach = function(options)
 	local on_attach = function(client, bufnr)
 		local bufopts = { noremap = true, silent = true, buffer = bufnr }
+
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
 		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
 		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
@@ -51,3 +52,6 @@ lspconfig["tsserver"].setup({
 		disable_formatting = true,
 	}),
 })
+
+vim.api.nvim_set_keymap("n", "<C-n>", ":CodeActionMenu<CR>", { noremap = true, silent = true })
+vim.g.code_action_menu_show_details = false

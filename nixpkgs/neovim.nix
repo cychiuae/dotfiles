@@ -93,6 +93,7 @@ in
       indent-blankline-nvim
 
       # lsp
+      nvim-code-action-menu
       nvim-lspconfig
       null-ls-nvim
 
