@@ -66,7 +66,7 @@ vim.g.loaded_netrwPlugin = 1
 require("plugins.autopairs")
 require("plugins.bufferline")
 require("plugins.cmp")
-require("plugins.colorizer")
+-- require("plugins.colorizer")
 require("plugins.gitsign")
 require("plugins.indentblankline")
 -- need to load mason before lsp
