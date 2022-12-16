@@ -72,6 +72,7 @@ in
     plugins = with pkgs.vimPlugins; [
       # Match bracket
       nvim-autopairs
+      nvim-ts-autotag
 
       # Quick comment out code
       vim-commentary
