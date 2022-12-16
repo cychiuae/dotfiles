@@ -24,4 +24,9 @@ cmp.setup({
 	}, {
 		{ name = "buffer" },
 	}),
+	formatting = {
+		format = require("lspkind").cmp_format({
+			mode = "text_symbol", -- show only symbol annotations
+		}),
+	},
 })

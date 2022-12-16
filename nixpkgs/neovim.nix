@@ -85,6 +85,7 @@ in
       nvim-cmp
       cmp-vsnip
       vim-vsnip
+      lspkind-nvim
 
       # git
       gitsigns-nvim
