@@ -6,6 +6,11 @@ lsp_defaults.capabilities =
 
 local make_on_attach = function(options)
 	local on_attach = function(client, bufnr)
+		local opts = { noremap = true, silent = true }
+		vim.keymap.set("n", "<C-e>", vim.diagnostic.open_float, opts)
+		vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+		vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+
 		local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
