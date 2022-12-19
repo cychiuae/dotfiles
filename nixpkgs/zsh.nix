@@ -36,6 +36,7 @@
       export PATH=~/Library/Android/sdk/tools:$PATH
       export PATH=~/Library/Android/sdk/platform-tools:$PATH
       export PATH="/usr/local/sbin:$PATH"
+      export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
       DISABLE_AUTO_TITLE="true"
 

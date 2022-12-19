@@ -7,6 +7,10 @@ let
     ./tmux.nix
     ./zsh.nix
   ];
+
+  gcloudPkgs = pkgs.google-cloud-sdk.withExtraComponents [
+    pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
+  ];
 in
 {
   inherit imports;
@@ -28,9 +32,11 @@ in
     stateVersion = "22.05";
   };
 
+
+
   home.packages = with pkgs; [
     fd
-    google-cloud-sdk
+    gcloudPkgs
     gnupg
     jq
     kubectl
