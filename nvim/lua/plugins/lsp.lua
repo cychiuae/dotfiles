@@ -7,7 +7,7 @@ lsp_defaults.capabilities =
 local make_on_attach = function(options)
 	local on_attach = function(client, bufnr)
 		local opts = { noremap = true, silent = true }
-		vim.keymap.set("n", "<C-e>", vim.diagnostic.open_float, opts)
+		vim.keymap.set("n", "g?", vim.diagnostic.open_float, opts)
 		vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 		vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
@@ -15,6 +15,7 @@ local make_on_attach = function(options)
 
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
 		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
 		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
 
 		local disable_formatting = options.disable_formatting or false
