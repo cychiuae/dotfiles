@@ -100,6 +100,7 @@ in
 
       # git
       gitsigns-nvim
+      lazygit-nvim
 
       # indentation
       indent-blankline-nvim

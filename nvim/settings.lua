@@ -69,6 +69,7 @@ require("plugins.cmp")
 -- require("plugins.colorizer")
 require("plugins.gitsign")
 require("plugins.indentblankline")
+require("plugins.lazygit")
 -- need to load mason before lsp
 require("plugins.mason")
 require("plugins.lsp")
