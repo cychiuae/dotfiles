@@ -3,5 +3,12 @@
 {
   programs.lazygit = {
     enable = true;
+    settings = {
+      keybinding = {
+        universal = {
+          appendNewline = "<tab>";
+        };
+      };
+    };
   };
 }
