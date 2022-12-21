@@ -3,6 +3,7 @@
 let
   imports = [
     ./git.nix
+    ./lazygit.nix
     ./neovim.nix
     ./tmux.nix
     ./zsh.nix
@@ -42,6 +43,7 @@ in
     jq
     kubectl
     kubectx
+    lazygit # git tui
     node2nix # An useful package for installing node packages
     reattach-to-user-namespace # cp & paste in tmux to clipboard
     ripgrep
