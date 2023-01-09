@@ -64,6 +64,9 @@ in
       # formatter
       nixpkgs-fmt
 
+      # tree sitter
+      tree-sitter
+
       # lsp
 
       #nix

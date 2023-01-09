@@ -25,6 +25,9 @@ require("nvim-tree").setup({
 			},
 		},
 	},
+	git = {
+		ignore = false,
+	},
 })
 
 vim.opt.termguicolors = true

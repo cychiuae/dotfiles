@@ -9,7 +9,7 @@ require("mason-lspconfig").setup({
 require("mason-null-ls").setup({
 	ensure_installed = {
 		"eslint_d",
-		"prettier",
+		"prettierd",
 		"stylua",
 	},
 })

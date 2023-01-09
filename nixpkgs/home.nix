@@ -48,6 +48,7 @@ in
     reattach-to-user-namespace # cp & paste in tmux to clipboard
     ripgrep
     skim
+    spotify-tui
     tmux
     xh
     yarn

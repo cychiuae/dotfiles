@@ -7,7 +7,7 @@ null_ls.setup({
 			prefer_local = "node_modules/.bin",
 		}),
 		null_ls.builtins.formatting.nixpkgs_fmt,
-		null_ls.builtins.formatting.prettier.with({
+		null_ls.builtins.formatting.prettierd.with({
 			prefer_local = "node_modules/.bin",
 		}),
 		null_ls.builtins.formatting.stylua,
