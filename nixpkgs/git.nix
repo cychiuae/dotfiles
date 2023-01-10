@@ -30,6 +30,10 @@
         verbose = true;
       };
 
+      rebase = {
+        autosquash = true;
+      };
+
       "diff \"blackbox\"" = {
         textconv = "gpg --use-agent -q --batch --decrypt";
       };
