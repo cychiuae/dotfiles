@@ -41,7 +41,7 @@ lspconfig["gopls"].setup({
 })
 
 -- lua
-lspconfig["sumneko_lua"].setup({
+lspconfig["lua_ls"].setup({
 	on_attach = make_on_attach({
 		disable_formatting = true,
 	}),
