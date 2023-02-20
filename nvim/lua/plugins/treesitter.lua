@@ -14,6 +14,7 @@ require("nvim-treesitter.configs").setup({
 		"dockerfile",
 		"go",
 		"gomod",
+		"gowork",
 		"graphql",
 		"html",
 		"java",

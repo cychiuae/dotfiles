@@ -69,6 +69,9 @@ in
 
       # lsp
 
+      # golang
+      gopls
+
       #nix
       rnix-lsp
       # js/ts

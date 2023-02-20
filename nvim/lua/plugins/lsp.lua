@@ -35,6 +35,11 @@ end
 -- 	capabilities = capabilities,
 -- })
 
+-- golang
+lspconfig["gopls"].setup({
+	on_attach = make_on_attach({}),
+})
+
 -- lua
 lspconfig["sumneko_lua"].setup({
 	on_attach = make_on_attach({
