@@ -30,18 +30,13 @@
     initExtra = ''
       export LANG=en_US.UTF-8
 
-      export ANDROID_HOME=~/Library/Android/sdk
-      export GOPATH=$HOME/golang
-      export PATH=$PATH:$GOPATH/bin
-      export PATH=~/Library/Android/sdk/tools:$PATH
-      export PATH=~/Library/Android/sdk/platform-tools:$PATH
       export PATH="/usr/local/sbin:$PATH"
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
       DISABLE_AUTO_TITLE="true"
 
-      $(brew --prefix asdf)/libexec/asdf.sh
-      . /usr/local/opt/asdf/libexec/asdf.sh
+      # $(brew --prefix asdf)/libexec/asdf.sh
+      # . /usr/local/opt/asdf/libexec/asdf.sh
 
       # tmux
       export TERM=screen-256color

@@ -36,6 +36,7 @@ in
 
 
   home.packages = with pkgs; [
+    blackbox
     dua # disk usage util
     fd
     gcloudPkgs
@@ -44,7 +45,10 @@ in
     kubectl
     kubectx
     lazygit # git tui
+    nerdfonts
     node2nix # An useful package for installing node packages
+    nodejs
+    pinentry_mac
     reattach-to-user-namespace # cp & paste in tmux to clipboard
     ripgrep
     skim
@@ -53,6 +57,10 @@ in
     xh
     yarn
   ];
+
+  fonts.fontconfig = {
+    enable = true;
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
