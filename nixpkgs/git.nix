@@ -8,7 +8,7 @@
     userEmail = "cychiuae@connect.ust.hk";
 
     signing = {
-      key = "2E361B0D75D0ED2F";
+      key = "40228CC36DA57438";
       signByDefault = true;
     };
 

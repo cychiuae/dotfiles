@@ -36,6 +36,7 @@ in
 
 
   home.packages = with pkgs; [
+    asdf-vm
     blackbox
     dua # disk usage util
     fd
@@ -48,6 +49,7 @@ in
     nerdfonts
     node2nix # An useful package for installing node packages
     nodejs
+    pinentry
     pinentry_mac
     reattach-to-user-namespace # cp & paste in tmux to clipboard
     ripgrep
