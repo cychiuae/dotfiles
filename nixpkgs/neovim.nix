@@ -71,9 +71,10 @@ in
 
       # golang
       gopls
-
-      #nix
+      # nix
       rnix-lsp
+      # python
+      python310Packages."jedi-language-server"
       # js/ts
       nodePackages.typescript
       nodePackages.typescript-language-server

@@ -59,6 +59,11 @@ lspconfig["rnix"].setup({
 	on_attach = make_on_attach({}),
 })
 
+-- python
+lspconfig["jedi_language_server"].setup({
+	on_attach = make_on_attach({}),
+})
+
 -- tailwind
 -- lspconfig["tailwindcss"].setup({
 -- 	on_attach = make_on_attach({}),
