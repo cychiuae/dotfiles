@@ -35,6 +35,14 @@ end
 -- 	capabilities = capabilities,
 -- })
 
+-- c# dotnet
+lspconfig["omnisharp"].setup({
+	on_attach = make_on_attach({}),
+	cmd = {
+		"omnisharp",
+	},
+})
+
 -- golang
 lspconfig["gopls"].setup({
 	on_attach = make_on_attach({}),

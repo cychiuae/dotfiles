@@ -45,17 +45,21 @@ in
     jq
     kubectl
     kubectx
+    kubernetes-helm
     lazygit # git tui
     nerdfonts
     node2nix # An useful package for installing node packages
     nodejs
+    openssh
     pinentry
     pinentry_mac
+    python311
     reattach-to-user-namespace # cp & paste in tmux to clipboard
     ripgrep
     skim
     spotify-tui
     tmux
+    watch
     xh
     yarn
   ];

@@ -69,6 +69,9 @@ in
 
       # lsp
 
+      # c# dotnet
+      omnisharp-roslyn
+
       # golang
       gopls
 
