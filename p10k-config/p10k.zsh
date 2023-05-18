@@ -68,7 +68,6 @@
       # terraform               # terraform workspace (https://www.terraform.io)
       # aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
       context                 # user@hostname
-      battery
       load
       # nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
       ranger                  # ranger shell (https://github.com/ranger/ranger)
