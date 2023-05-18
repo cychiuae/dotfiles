@@ -27,8 +27,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "williamboman";
       repo = "mason-lspconfig.nvim";
-      rev = "e8bd50153b94cc5bbfe3f59fc10ec7c4902dd526";
-      sha256 = "sha256-BHUw/LUVxfw5XWjW5EYMAyTmnRpuvt+duoOkHjJO878=";
+      rev = "90a8bbf106b85b76951a34c542058ffa807de2b1";
+      sha256 = "sha256-jUbk77uefolxJI9EaoAlxkq5tstStf4JCh0xCc9IlT8=";
     };
     buildPhase = ''
       echo "Skip build phase"
