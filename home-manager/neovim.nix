@@ -1,15 +1,6 @@
 { config, pkgs, lib, ... }:
 
 let
-  vscode-nvim = pkgs.vimUtils.buildVimPlugin {
-    name = "vscode.nvim";
-    src = pkgs.fetchFromGitHub {
-      owner = "Mofiqul";
-      repo = "vscode.nvim";
-      rev = "dabd5454e88d9ac9f91a5c2f9f6b347410e31162";
-      sha256 = "sha256-08+N892xOvbFEk/yAZLZHcR+ixdVTOeY83xO3wf/Oqc=";
-    };
-  };
   mason-nvim = pkgs.vimUtils.buildVimPlugin {
     name = "mason.nvim";
     src = pkgs.fetchFromGitHub {
@@ -139,9 +130,6 @@ in
       mason-nvim
       mason-lspconfig-nvim
       mason-null-ls-nvim
-
-      # theme
-      vscode-nvim
     ];
   };
 }
