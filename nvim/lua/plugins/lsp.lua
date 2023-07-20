@@ -62,6 +62,10 @@ lspconfig["lua_ls"].setup({
 	},
 })
 
+lspconfig["pyright"].setup({
+	on_attach = make_on_attach({}),
+})
+
 -- nix
 lspconfig["rnix"].setup({
 	on_attach = make_on_attach({}),

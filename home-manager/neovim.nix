@@ -66,6 +66,9 @@ in
       # golang
       gopls
 
+      # python
+      pyright
+
       #nix
       rnix-lsp
       # js/ts
