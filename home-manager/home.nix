@@ -39,6 +39,7 @@ in
 
   home.packages = with pkgs; [
     asdf-vm
+    awscli2
     blackbox
     dua # disk usage util
     fd
