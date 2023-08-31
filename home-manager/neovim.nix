@@ -25,16 +25,6 @@ let
       echo "Skip build phase"
     '';
   };
-  mason-null-ls-nvim = pkgs.vimUtils.buildVimPlugin {
-    name = "mason-null-ls.nvim";
-    src = pkgs.fetchFromGitHub {
-      owner = "jay-babu";
-      repo = "mason-null-ls.nvim";
-      rev = "0fcc40394b8d0f525a8be587268cbfac3e70a5bc";
-      sha256 = "sha256-gUnG3kCNHc7aTOR5844zQwdNsDhi0uuVHT/n36NGXJg=";
-    };
-  };
-
   customNodePackages = pkgs.callPackage ./nodePackages { };
 in
 {
@@ -101,6 +91,9 @@ in
       vim-vsnip
       lspkind-nvim
 
+      #formatter
+      formatter-nvim
+
       # git
       gitsigns-nvim
       lazygit-nvim
@@ -108,10 +101,12 @@ in
       # indentation
       indent-blankline-nvim
 
+      # lint
+      nvim-lint
+
       # lsp
       nvim-code-action-menu
       nvim-lspconfig
-      null-ls-nvim
 
       # telescope
       plenary-nvim
@@ -132,7 +127,6 @@ in
       # manage lsp
       mason-nvim
       mason-lspconfig-nvim
-      mason-null-ls-nvim
     ];
   };
 }

@@ -34,7 +34,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 -- Format on save
-vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format{}]])
+-- vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format{}]])
 
 -- Tabs / Buffers
 vim.api.nvim_set_keymap("n", "<C-h>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
@@ -67,14 +67,15 @@ require("plugins.autopairs")
 require("plugins.bufferline")
 require("plugins.cmp")
 -- require("plugins.colorizer")
+require("plugins.formatter")
 require("plugins.gitsign")
 require("plugins.indentblankline")
 require("plugins.lazygit")
+require("plugins.nvim-lint")
 -- need to load mason before lsp
 require("plugins.mason")
 require("plugins.lsp")
 require("plugins.lualine")
-require("plugins.nullls")
 require("plugins.telescope")
 require("plugins.tree")
 require("plugins.treesitter")

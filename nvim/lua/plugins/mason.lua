@@ -5,11 +5,3 @@ require("mason-lspconfig").setup({
 		"lua_ls", --lua
 	},
 })
-
-require("mason-null-ls").setup({
-	ensure_installed = {
-		"eslint_d",
-		"prettierd",
-		"stylua",
-	},
-})
