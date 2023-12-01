@@ -1,3 +1,6 @@
-require("indent_blankline").setup({
-	show_current_context = true,
+require("ibl").setup({
+	scope = {
+		show_start = false,
+		show_end = false,
+	},
 })

@@ -41,6 +41,7 @@ in
     asdf-vm
     awscli2
     blackbox
+    cloudflared
     dua # disk usage util
     fd
     gcloudPkgs
@@ -54,6 +55,7 @@ in
     node2nix # An useful package for installing node packages
     nodejs
     openssh
+    pass
     pinentry
     pinentry_mac
     python311
