@@ -3,8 +3,10 @@
 {
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
     enableCompletion = true;
+    autosuggestion = {
+      enable = true;
+    };
 
     plugins = [
       {
@@ -31,6 +33,8 @@
       export LANG=en_US.UTF-8
 
       export PATH="/usr/local/sbin:$PATH"
+      export PATH="$HOME/.flutter/bin:$PATH"
+      export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
       DISABLE_AUTO_TITLE="true"
@@ -41,6 +45,9 @@
       # tmux
       export TERM=screen-256color
       eval "$(direnv hook zsh)"
+
+      # brew
+      eval "$(/opt/homebrew/bin/brew shellenv)"
     '';
   };
 }

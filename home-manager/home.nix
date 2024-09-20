@@ -32,13 +32,12 @@ in
     # You can update Home Manager without changing this value. See
     # the Home Manager release notes for a list of state version
     # changes in each release.
-    stateVersion = "23.11";
+    stateVersion = "24.05";
   };
 
 
 
   home.packages = with pkgs; [
-    asdf-vm
     awscli2
     blackbox
     cloudflared
@@ -46,6 +45,7 @@ in
     fd
     gcloudPkgs
     gnupg
+    hey
     jq
     kubectl
     kubectx
@@ -56,15 +56,15 @@ in
     nodejs
     openssh
     pass
-    pinentry
+    pinentry-tty
     pinentry_mac
     python311
     reattach-to-user-namespace # cp & paste in tmux to clipboard
     ripgrep
     skim
     sops
-    spotify-tui
     tmux
+    tree
     watch
     xh
     yarn

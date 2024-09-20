@@ -60,9 +60,9 @@ require("formatter").setup({
 		go = {
 			require("formatter.filetypes.go").gofmt,
 		},
-		html = {
-			prettier,
-		},
+		-- html = {
+		-- 	prettier,
+		-- },
 		markdown = {
 			prettier,
 		},

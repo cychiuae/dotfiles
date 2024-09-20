@@ -15,7 +15,7 @@
     aliases = {
       lg = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all";
       fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | sk | cut -c -7 | xargs -o git commit --fixup";
-      switch-branch = "!git branch | sk | cut -c -7 | xargs -o git switch";
+      switch-branch = "!git branch | sk | xargs -o git switch";
     };
 
     ignores = [

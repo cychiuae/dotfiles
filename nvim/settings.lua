@@ -66,6 +66,8 @@ vim.g.loaded_netrwPlugin = 1
 require("plugins.autopairs")
 require("plugins.bufferline")
 require("plugins.cmp")
+require("plugins.dressing")
+require("plugins.noice")
 -- require("plugins.colorizer")
 require("plugins.formatter")
 require("plugins.gitsign")

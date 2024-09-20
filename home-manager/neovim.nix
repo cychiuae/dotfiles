@@ -60,7 +60,7 @@ in
       pyright
 
       #nix
-      rnix-lsp
+      nil
       # js/ts
       nodePackages.typescript
       nodePackages.typescript-language-server
@@ -87,9 +87,18 @@ in
       cmp-path
       cmp-cmdline
       nvim-cmp
+      cmp_luasnip
+      luasnip
       cmp-vsnip
       vim-vsnip
       lspkind-nvim
+
+      # Pretty input
+      dressing-nvim
+
+      # Pretty ui
+      noice-nvim
+      nui-nvim
 
       #formatter
       formatter-nvim
