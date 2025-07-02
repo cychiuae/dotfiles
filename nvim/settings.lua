@@ -75,7 +75,7 @@ require("plugins.indentblankline")
 require("plugins.lazygit")
 require("plugins.nvim-lint")
 -- need to load mason before lsp
-require("plugins.mason")
+-- require("plugins.mason")
 require("plugins.lsp")
 require("plugins.lualine")
 require("plugins.telescope")

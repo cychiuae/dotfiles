@@ -1,30 +1,30 @@
 { config, pkgs, lib, ... }:
 
 let
-  mason-nvim = pkgs.vimUtils.buildVimPlugin {
-    name = "mason.nvim";
-    src = pkgs.fetchFromGitHub {
-      owner = "williamboman";
-      repo = "mason.nvim";
-      rev = "b3c82a23b26818e18e20036452bdcf7821ddc37d";
-      sha256 = "sha256-+3ppOoOVpguK6ghE3KByGnY2j5GpaxGmOGwmTBT3bfE=";
-    };
-    buildPhase = ''
-      echo "Skip build phase"
-    '';
-  };
-  mason-lspconfig-nvim = pkgs.vimUtils.buildVimPlugin {
-    name = "mason-lspconfig.nvim";
-    src = pkgs.fetchFromGitHub {
-      owner = "williamboman";
-      repo = "mason-lspconfig.nvim";
-      rev = "90a8bbf106b85b76951a34c542058ffa807de2b1";
-      sha256 = "sha256-jUbk77uefolxJI9EaoAlxkq5tstStf4JCh0xCc9IlT8=";
-    };
-    buildPhase = ''
-      echo "Skip build phase"
-    '';
-  };
+  # mason-nvim = pkgs.vimUtils.buildVimPlugin {
+  #   name = "mason.nvim";
+  #   src = pkgs.fetchFromGitHub {
+  #     owner = "williamboman";
+  #     repo = "mason.nvim";
+  #     rev = "b3c82a23b26818e18e20036452bdcf7821ddc37d";
+  #     sha256 = "sha256-+3ppOoOVpguK6ghE3KByGnY2j5GpaxGmOGwmTBT3bfE=";
+  #   };
+  #   buildPhase = ''
+  #     echo "Skip build phase"
+  #   '';
+  # };
+  # mason-lspconfig-nvim = pkgs.vimUtils.buildVimPlugin {
+  #   name = "mason-lspconfig.nvim";
+  #   src = pkgs.fetchFromGitHub {
+  #     owner = "williamboman";
+  #     repo = "mason-lspconfig.nvim";
+  #     rev = "90a8bbf106b85b76951a34c542058ffa807de2b1";
+  #     sha256 = "sha256-jUbk77uefolxJI9EaoAlxkq5tstStf4JCh0xCc9IlT8=";
+  #   };
+  #   buildPhase = ''
+  #     echo "Skip build phase"
+  #   '';
+  # };
   customNodePackages = pkgs.callPackage ./nodePackages { };
 in
 {
@@ -56,6 +56,9 @@ in
       # golang
       gopls
 
+      # lua formatter
+      stylua
+
       # python
       pyright
 
@@ -64,6 +67,9 @@ in
       # js/ts
       nodePackages.typescript
       nodePackages.typescript-language-server
+
+      # terraform
+      terraform-lsp
     ] ++ [
       # tailwindcss
       customNodePackages."@tailwindcss/language-server"
@@ -134,8 +140,8 @@ in
       tokyonight-nvim
     ] ++ [
       # manage lsp
-      mason-nvim
-      mason-lspconfig-nvim
+      # mason-nvim
+      # mason-lspconfig-nvim
     ];
   };
 }

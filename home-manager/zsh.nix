@@ -1,5 +1,17 @@
 { config, pkgs, lib, ... }:
 
+let
+  p10kPkgs = import
+    (pkgs.fetchFromGitHub {
+      owner = "NixOS";
+      repo = "nixpkgs";
+      rev = "6e0eafbd8cbaaa4ae88a826d4d0470c28b2916a4";
+      sha256 = "0zgzy10p6qqjschdsl35lydj6qw6hv0d6cc6rxs0fm2w01qfm4hs";
+    })
+    {
+      inherit (pkgs) system;
+    };
+in
 {
   programs.zsh = {
     enable = true;
@@ -11,8 +23,8 @@
     plugins = [
       {
         name = "powerlevel10k";
-        src = pkgs.zsh-powerlevel10k;
-        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        src = "${p10kPkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
+        file = "powerlevel10k.zsh-theme";
       }
       {
         name = "powerlevel10k-config";

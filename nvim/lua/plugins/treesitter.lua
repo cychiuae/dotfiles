@@ -28,6 +28,7 @@ require("nvim-treesitter.configs").setup({
 		"sql",
 		"swift",
 		"tsx",
+		"terraform",
 		"typescript",
 		"vim",
 		"vue",

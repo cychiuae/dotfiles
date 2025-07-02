@@ -83,6 +83,11 @@ lspconfig["nil"].setup({
 -- lspconfig["tailwindcss"].setup({
 -- 	on_attach = make_on_attach({}),
 -- })
+--
+lspconfig["terraform-lsp"].setup({
+	capabilities = capabilities,
+	on_attach = make_on_attach({}),
+})
 
 -- typescript
 lspconfig["tsserver"].setup({

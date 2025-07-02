@@ -38,7 +38,7 @@ in
 
 
   home.packages = with pkgs; [
-    awscli2
+    # awscli2
     blackbox
     cloudflared
     dua # disk usage util
@@ -49,9 +49,10 @@ in
     jq
     kubectl
     kubectx
+    kubelogin
     kubernetes-helm
     lazygit # git tui
-    nerdfonts
+    nerd-fonts.symbols-only
     node2nix # An useful package for installing node packages
     nodejs
     openssh
