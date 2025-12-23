@@ -66,6 +66,7 @@ in
     sops
     tmux
     tree
+    wakeonlan
     watch
     xh
     yarn
@@ -84,5 +85,10 @@ in
     nix-direnv = {
       enable = true;
     };
+  };
+
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
   };
 }

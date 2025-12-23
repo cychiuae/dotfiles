@@ -41,7 +41,7 @@ in
       ];
     };
 
-    initExtra = ''
+    initContent = ''
       export LANG=en_US.UTF-8
 
       export PATH="/usr/local/sbin:$PATH"
@@ -60,6 +60,12 @@ in
 
       # brew
       eval "$(/opt/homebrew/bin/brew shellenv)"
+
+      export PATH="$HOME/.asdf/shims:$PATH"
+
+      if [[ -n "$CURSOR_TRACE_ID" ]]; then
+        ZSH_THEME=""
+      fi
     '';
   };
 }
